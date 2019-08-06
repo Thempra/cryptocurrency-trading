@@ -2,7 +2,7 @@ FROM continuumio/anaconda3
 
 COPY requirements.txt /
 
-RUN apt-get install -y procps ; \
+RUN apt-get install -y procps python-pip; \
     pip install -r requirements.txt
 
 COPY src/ /app/
